@@ -2,6 +2,16 @@ const items = document.querySelectorAll(".rating a");
 // const itemWrapper = document.querySelector(".rating");
 
 
+const body = document.getElementsByTagName('body')[0];
+
+body.addEventListener('click', (event) => {
+    console.log(event);
+    if (event.target.classList.value === 'active') return;
+    items.forEach((otherItem) => {
+        otherItem.classList.remove('active')
+    });
+});
+
 
 items.forEach((item, clickedIdx) => {
     item.addEventListener('click', () => {
