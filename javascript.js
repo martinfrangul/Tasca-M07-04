@@ -1,6 +1,6 @@
 const items = document.querySelectorAll(".rating a");
-// const itemWrapper = document.querySelector(".rating");
 
+//// CLICK PER ESBORRAR TOT////
 
 const body = document.getElementsByTagName('body')[0];
 
@@ -12,10 +12,10 @@ body.addEventListener('click', (event) => {
     });
 });
 
+//// ACTIVE OR NOT ACTIVE DELS ITEMS////
 
 items.forEach((item, clickedIdx) => {
     item.addEventListener('click', () => {
-        // itemWrapper.classList.add("disabled");
         items.forEach((otherItem, otherIdx) => {
             if (otherIdx <= clickedIdx) {
                 otherItem.classList.add('active')
